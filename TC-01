@@ -1,1 +1,6 @@
+public String excelRead(int row, int col) throws EncryptedDocumentException, IOException {
+		File f = new File(PathConfig.excelpath);
+
+		Sheet sheet = WorkbookFactory.create(f).getSheet("Sheet3");
+		String readValue = sheet.getRow(row).getCell(col).getStringCellValue();
 
